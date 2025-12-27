@@ -1,0 +1,24 @@
+# --- Python Standartları ---
+__pycache__/
+*.pyc
+
+# --- Veri Setleri ---
+Patch Dataset/
+test-data-cy/
+
+# --- Model Dosyaları ---
+model/
+*.h5
+*.tflite
+*.pt
+*.pth
+*.keras
+
+# --- Çıktılar ve Loglar ---
+labels_histogram*
+labels.csv 
+
+# --- Ortam ---
+.vscode/
+venv/
+env/
