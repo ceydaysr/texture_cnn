@@ -23,6 +23,14 @@ Use a 1-5 scale:
 3) Export to TFLite:
    python export_tflite.py --saved_model_dir model\skin_texture_saved_model
 
+## Cheek cropping (full-face input)
+If you have full-face photos, you can crop left/right cheeks using MediaPipe landmarks:
+   python infer.py --data_dir "test-data-cy" --model_dir model\skin_texture_saved_model --use_cheeks
+
+This runs landmark detection, crops left/right cheek patches, and averages their scores.
+If your MediaPipe install does not expose `mp.solutions`, download a face landmarker model and run:
+   python infer.py --data_dir "test-data-cy" --model_dir model\skin_texture_saved_model --use_cheeks --landmark_model models\face_landmarker.task
+
 ## Notes
 - The model is a MobileNetV2 regressor with light augmentation.
 - Labels are normalized to 0-1 during training for stable optimization.

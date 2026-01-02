@@ -8,6 +8,7 @@ test-data-cy/
 
 # --- Model Dosyaları ---
 model/
+models/
 *.h5
 *.tflite
 *.pt
